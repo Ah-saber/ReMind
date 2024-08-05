@@ -31,13 +31,10 @@ export const defaultContentPageLayout: PageLayout = {
       Component.RecentNotes({
         title: "Recent Writing",
         limit: 4,
-        filter: (f) =>
-          f.slug!.startsWith("Recent/") && f.slug! !== "Recent/index" && !f.frontmatter?.noindex,
-        linkToMore: "Recent/" as SimpleSlug,
       }),
     ),
     Component.DesktopOnly(Component.Explorer()),
-    Component.DesktopOnly(Component.TableOfContents()),
+    //Component.DesktopOnly(Component.TableOfContents()),
   ],
   right: [
     Component.Graph(),
