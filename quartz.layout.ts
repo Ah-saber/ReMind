@@ -31,10 +31,10 @@ export const defaultContentPageLayout: PageLayout = {
       Component.RecentNotes({
         title: "Recent Writing",
         limit: 4,
+        linkToMore: "posts/" as SimpleSlug,
       }),
     ),
     Component.DesktopOnly(Component.Explorer()),
-    //Component.DesktopOnly(Component.TableOfContents()),
   ],
   right: [
     Component.Graph(),
