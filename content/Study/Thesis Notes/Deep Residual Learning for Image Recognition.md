@@ -26,9 +26,3 @@
 
 ResNet结构表现最好的是实用pre-activation，BN和ReLU提前
 ![Pasted image 20240720212517|300](https://raw.githubusercontent.com/Ah-saber/MyPic/main/Pasted%20image%2020240720212517.png)
-
-详见：![[bestResNet.pdf]]
-
-
-原论文
-![[He_Deep_Residual_Learning_CVPR_2016_paper.pdf]]
