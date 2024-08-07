@@ -30,8 +30,8 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(
       Component.RecentNotes({
         title: "Recent Writing",
-        limit: 3,
-        linkToMore: "posts/" as SimpleSlug,
+        limit: 4,
+        //linkToMore: "posts/" as SimpleSlug,
       }),
     ),
     Component.DesktopOnly(Component.Explorer()),
