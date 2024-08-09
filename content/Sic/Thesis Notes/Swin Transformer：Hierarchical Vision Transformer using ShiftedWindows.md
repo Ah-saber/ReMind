@@ -78,9 +78,9 @@ ViT指出Transformer的可用性，但是无法证明其普适性，Swin Transfo
 
 #### 计算复杂度
 
-如果是全局多头自注意力机制，计算复杂度如图
+如果是全局多头自注意力机制，计算复杂度如图 
 
-![[Swin Transformer：Hierarchical Vision Transformer using ShiftedWindows 2024-08-09 21.53.22.excalidraw]]
+![Pasted image 20240809231335|500](https://raw.githubusercontent.com/Ah-saber/MyPic/main/Pasted%20image%2020240809231335.png)
 
 初始矩阵H * W * C，乘上C * C的矩阵，加权计算Q，K，V三个同样尺寸的矩阵，Q和K转置计算自注意力，尺寸为HW * HW，A再与V计算得到最终矩阵，因为是多头自注意力，最后会经过一个投影将结果投影成合适的维度
 
