@@ -28,7 +28,7 @@ Tong Xiao  Shuang Li  Bochao Wang  Liang Lin  Xiaogang Wang  2017
 
 使用softmax的也会随类数增加导致计算变慢，甚至无法收敛
 
-**OIM**  维护一个所有标签个体的的特征查找表，比较当前batch的样本与全部注册实体之间的距离，同时，图像中会存在一些非标记的个体，这些个体可以作为标记个体的负样本，因此可以利用循环队列存储其特征进行比较。OIM损失函数比softmax损失函数收敛更快，更好
+**OIM**  维护一个所有标签个体的的特征查找表，比较当前batch的样本与全部注册实体之间的距离，同时，图像中会存在一些非标记的个体，这些个体可以作为标记个体的负样本，因此可以利用循环队列存储其特征进行比较。OIM损失函数比softmax损失函数收敛更快，更好 ^2fdafb
 
 最后再次重述了文章贡献：
 - 集成的搜索与重识别网络
@@ -53,7 +53,7 @@ Tong Xiao  Shuang Li  Bochao Wang  Liang Lin  Xiaogang Wang  2017
 
 **Person proposal Net**  使用一层512 * 3 * 3 的卷积层，专门用于转换行人的特征，依据参考文献设置9个锚点，使用softmax分类每个锚点是否是行人，用线性回归调整其位置，在[[非极大抑制|Non-maximum suppression]] 后选择128个作为最后的选择结果
 
-**Identification Net**  使用[[ROI Pooling|RoI-Pooling layer]]对框选结果进行池化，再将结果送给ResNet后面几层，经过全局池化变成2048的向量，由于行人proposal的结果会无可避免的存在错报，使用Softmax分类和线性回归非行人的框选结果。将结果进行L2正则化为256维度的子空间，再计算余弦相似度
+**Identification Net**  使用[[RoI Pooling|RoI-Pooling layer]]对框选结果进行池化，再将结果送给ResNet后面几层，经过全局池化变成2048的向量，由于行人proposal的结果会无可避免的存在错报，使用Softmax分类和线性回归非行人的框选结果。将结果进行L2正则化为256维度的子空间，再计算余弦相似度
 
 ## OIM损失函数
 
