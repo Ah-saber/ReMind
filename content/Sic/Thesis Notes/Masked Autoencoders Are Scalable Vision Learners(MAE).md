@@ -73,10 +73,12 @@ CV上自编码器的应用
 
 **Baseline** 使用ViT-Large做基线模型，事实证明在数据量并不多时，可以增加正则化手段来让结果更稳定
 
-消融实验
+### 消融实验
+
 ![Pasted image 20240807170150](https://raw.githubusercontent.com/Ah-saber/MyPic/main/Pasted%20image%2020240807170150.png)
 
 图说明掩盖范围对精度的影响
+
 ![Pasted image 20240807170300](https://raw.githubusercontent.com/Ah-saber/MyPic/main/Pasted%20image%2020240807170300.png)
 
 接着各种比较，秀肌肉

@@ -61,7 +61,7 @@ Vision Transformer的做法是：
 ## 方法
 
 先对图片分patch，输入Linear Porjetion of Flattened Patches 做编码，增加位置编码（因为图片的patch存在位置信息，如果位置不一样，则图片不一样）作为Transformer Encoder的输入
-![[Pasted image 20240804175613.png]]
+![Pasted image 20240804175613](https://raw.githubusercontent.com/Ah-saber/MyPic/main/Pasted%20image%2020240804175613.png)
 
 完整流程：
 224图片分成196个patch，每一个patch 16 x 16 x 3，一共768，即Linear层的维度为 768 x 768，输出为 196 x 768大小，还需要一个CLS token 所以最后序列长度为197x768，最后加上位置信息（求sum）
@@ -94,7 +94,7 @@ Transformer使用的是CLS token作为全局特征
 # 分析
 
 实验分析归纳偏置对传统网络和ViT的影响，实践证明了小数据集下，ViT效果远不如残差网络，大数据集下开始有所超越
-![[Pasted image 20240804204106.png|400]]
+![Pasted image 20240804204106|400](https://raw.githubusercontent.com/Ah-saber/MyPic/main/Pasted%20image%2020240804204106.png)
 
 在冲点数的时候使用了训练的一些技巧，像是Dropout、weight decay等等，不利于研究模型本身的特性，所以重新做了few-shot evaluation
 
