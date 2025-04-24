@@ -1,6 +1,8 @@
 ---
-title: Welcome to Quartz
+title: Welcome to ReMind
 ---
+![[neko.svg]]
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+Welcome to ReMind!
+
+I wana share some notes and thoughts here,be free to hang around.
