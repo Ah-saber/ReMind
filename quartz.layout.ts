@@ -9,8 +9,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/Ah-saber/ReMind",
     },
   }),
 }
@@ -43,9 +42,9 @@ export const defaultContentPageLayout: PageLayout = {
       Component.RecentNotes({
         title: "Recent Writing",
         limit: 2,
-        filter: (f) =>
-          f.slug!.startsWith("posts/") && f.slug! !== "posts/index" && !f.frontmatter?.noindex,
-        linkToMore: "posts/" as SimpleSlug,
+        //filter: (f) =>
+          //f.slug!.startsWith("/") && f.slug! !== "/index" && !f.frontmatter?.noindex,
+        linkToMore: "/" as SimpleSlug,
       }),
     ),
     Component.Explorer(),
