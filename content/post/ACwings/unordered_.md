@@ -1,0 +1,6 @@
+- 分为  unordered_set   unordered_map   unordered_multiset   unordered_multimao
+- 与 [[set/multi]]  [[map/multi]]
+	- 区别在于没有 lower_bound()/ upper_bound()， 不支持  迭代器的  --   ++
+	- 增删改查的时间是  O(1)
+- `#include<unordered_map>`
+-
