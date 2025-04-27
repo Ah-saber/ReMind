@@ -11,7 +11,10 @@ html {
   width: 100vw;
 }
 
-body,
+body{
+  font-size: 18px;
+}
+
 section {
   margin: 0;
   box-sizing: border-box;
@@ -142,7 +145,7 @@ a {
   margin: 0 auto;
   & article {
     & > h1 {
-      font-size: 3rem;
+      font-size: 2rem;
     }
 
     & li:has(> input[type="checkbox"]) {
