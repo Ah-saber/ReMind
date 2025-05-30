@@ -1,4 +1,4 @@
---
+---
 title: Welcome to ReMind
 ---
 ![[neko.svg]]
