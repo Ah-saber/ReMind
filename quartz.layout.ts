@@ -44,7 +44,7 @@ export const defaultContentPageLayout: PageLayout = {
         limit: 2,
         //filter: (f) =>
           //f.slug!.startsWith("/") && f.slug! !== "/index" && !f.frontmatter?.noindex,
-        linkToMore: "/" as SimpleSlug,
+        linkToMore: "/ML/" as SimpleSlug,
       }),
     ),
     Component.Explorer(),
