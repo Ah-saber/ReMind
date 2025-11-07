@@ -59,9 +59,9 @@ $$q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{1-\beta_t} x_{t-1}, (\beta_t) I)$$
 对其进行化简，令$\alpha_t = 1 - \beta_t \quad \text{和} \quad \bar{\alpha}_t = \prod_{i=1}^{t} \alpha_i$ 可得
 
 $$
-\begin{align}  \mathbf{x}_t &= \sqrt{\alpha_t}\mathbf{x}_{t-1} + \sqrt{1 - \alpha_t}\boldsymbol{\epsilon}_{t-1} \quad &;\text{where } \boldsymbol{\epsilon}_{t-1}, \boldsymbol{\epsilon}_{t-2}, \cdots \sim \mathcal{N}(\mathbf{0}, \mathbf{I}) \\ 
+\begin{aligned}  \mathbf{x}_t &= \sqrt{\alpha_t}\mathbf{x}_{t-1} + \sqrt{1 - \alpha_t}\boldsymbol{\epsilon}_{t-1} \quad &;\text{where } \boldsymbol{\epsilon}_{t-1}, \boldsymbol{\epsilon}_{t-2}, \cdots \sim \mathcal{N}(\mathbf{0}, \mathbf{I}) \\ 
 &= \sqrt{\alpha_t\alpha_{t-1}}\mathbf{x}_{t-2} + \sqrt{1 - \alpha_t\alpha_{t-1}}\bar{\boldsymbol{\epsilon}}_{t-2} \quad &;\text{where } \bar{\boldsymbol{\epsilon}}_{t-2} \text{ merges two Gaussians (*).} \\
-&= \cdots \\ &= \sqrt{\bar{\alpha}_t}\mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_t}\boldsymbol{\epsilon} \\ q(\mathbf{x}_t|\mathbf{x}_0) &= \mathcal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t}\mathbf{x}_0, (1 - \bar{\alpha}_t)\mathbf{I}) \end{align}
+&= \cdots \\ &= \sqrt{\bar{\alpha}_t}\mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_t}\boldsymbol{\epsilon} \\ q(\mathbf{x}_t|\mathbf{x}_0) &= \mathcal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t}\mathbf{x}_0, (1 - \bar{\alpha}_t)\mathbf{I}) \end{aligned}
 $$
 
 >在高斯分布中，对于 $\mathcal{N}(0, \sigma^2_1 \mathbf{I})$ + $\mathcal{N}(0, \sigma^2_2 \mathbf{I})$ ，可以得到 $\mathcal{N}(0, (\sigma^2_1+\sigma^2_2) \mathbf{I})$
@@ -79,7 +79,9 @@ $$\mathbf{x}_t = \mathbf{x}_{t-1} + \frac{\delta}{2} \nabla_{\mathbf{x}} \log p(
 
 对比标准的 SGD 方法，随机梯度朗之万方法将高斯噪声结合进参数更新中，避免陷入局部最优解
 
->[!关于朗之万动力学]
+>[!Note]
+>**Langevin dynamics**
+>
 >是一种考虑到系统热噪声下用来模拟分子运动的动力学公式，在机器学习中用来模拟从概率分布中抽取样本的过程
 >
 >![[朗之万优化示意图.gif |400]]
